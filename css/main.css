@@ -1,0 +1,300 @@
+
+* {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: clamp(inherit,1ch,1.2rem);
+}
+
+
+header{
+    height: auto;
+}
+
+.navigation{
+    margin-bottom: 8rem;
+}
+
+.nav{
+    height: auto;
+    background-color: rgba(240,240,240,0.9);
+    width: 100%;
+    padding-bottom: 0.5rem;
+}
+
+.nav p{
+    font-size: 1.4rem;
+}
+
+
+
+.nav ul{
+    transform: scale(0,0);
+    position: absolute;
+    background: rgba(240,240,240,1);
+    width: 100%;
+    height: 100vh;
+
+    
+    
+}
+
+
+.nav li{
+    list-style-type: none;
+    margin: 2rem  2rem;
+    padding: 0.5rem 2rem;
+}
+
+
+
+.nav p,
+.checkbox{
+    margin: 0rem 1rem 0 1rem;
+    padding-top: 1rem;
+
+}
+
+/* for hamburger and menubar */
+
+.checkbox{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.checkbox span{
+    display: block;
+    width: 2em;
+    height: 2px;
+    background: black;
+}
+
+.checkbox span:last-child{
+    margin-top: 3px;
+}
+
+.checkbox span:first-child{
+    margin-bottom: 3px;
+}
+
+.nav-toggle:checked ~ ul {
+    transform: scale(1,1);
+    transform-origin: top;
+    transition: transform 500ms ease-in-out;
+}
+
+
+/* class of checkbox */
+.nav-toggle{
+    display: none;
+}
+
+
+
+#logo{
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: Helvetica, sans-serif;
+    color: purple;
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-size: clamp(1rem,1rem,1.2rem);
+    display: block;
+}
+
+
+
+
+
+li:not(:last-child) a:hover{
+    color: red;
+}
+
+
+/* Header Content */
+
+.header-content{
+    margin: 0 0.2rem;
+    overflow-y: hidden;
+}
+
+
+.header--content{
+    text-align: center;
+}
+
+.header--content > :first-child{
+    color: red;
+    text-transform:uppercase;
+    font-family: helvetica;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+
+}
+.header--content h1{
+    text-transform: capitalize;
+    line-height: 1.2;
+    font-size: 3.5rem;
+}
+.header--content h1 span{
+    color: purple;
+}
+
+.header--content p{
+    margin-top: 0.65rem;
+}
+
+
+.website-field input,
+.website-field button{
+    margin: 1rem 0;
+    padding: 0.5rem;
+    width:clamp(15rem,20vw,25rem);
+    height: 2rem;
+    border-radius: 20px;
+    background-color: purple;
+    color: white;
+    overflow: hidden;
+}
+
+.website-field button{
+    margin-top:0rem ;
+    height: 2.5rem;
+}
+
+.header-image{
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.header-image{
+    text-align: center;
+}
+
+.header-image img{
+    margin: auto;
+    border-radius: 60%;
+    max-width: 100%;
+}
+
+
+
+
+@media (min-width:1060px){
+
+    #nav-toggle:checked ~ ul {
+        display: flex;
+      }
+
+    header{
+        height: 100vh;
+    }
+    
+
+    
+
+    .navigation{
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 999;
+
+    }
+
+    .nav{
+        display: flex;
+        flex-grow: 1;
+        padding: 0.5rem 0;
+    }
+
+.nav p{
+    padding-left: 2rem;
+}
+
+    .nav ul {
+        all: unset;
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        transform: scale(1,1) ;
+        padding-right: 2rem;
+        margin: 0.5rem 0;
+        position: static;
+    }
+
+    .nav li{
+        margin: 0.5em;
+    }
+
+    li:nth-of-type(1) {
+        margin-left: auto;
+    }
+
+    li:last-child{
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-align: center;
+        border:  2px black solid;
+        border-radius: 23px;
+        background: purple;
+    
+    }
+    
+    li:last-child a{
+        color: white;
+    }
+    
+    li:last-child:hover{
+        background:darkorchid;
+        
+    }
+
+
+    .checkbox {
+        display: none;
+    }
+
+    .header-content{
+        display: flex;
+        width: 100%;
+        margin-top: 10rem;
+    }
+
+    .header--content{
+        flex: 50%;
+        margin: 3.5rem 0 0 3.5rem;
+        text-align: left;
+    }
+
+    .website-field{
+        margin-top: 3rem;
+    }
+    .website-field input{
+        margin-right: 0.5rem;
+    }
+    
+    .header-image{
+        flex: 50%;
+    }
+    .header-image img{
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+    
+
+
+    
+
+
+
+
+
+}
