@@ -19,7 +19,6 @@ body{
 
 .portfolio-image{
     display: grid;
-    grid-auto-flow: dense;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     padding: 0 0.6rem;
     gap: 0.5em;
@@ -28,7 +27,6 @@ body{
     
 }
 .portfolio-image img{
-    min-width: 50%;
     max-width: 100%;
     min-height:100% ;
     object-fit: cover;
@@ -51,4 +49,18 @@ body{
     .portfolio-image{
         padding: 0 5rem;
     }
+}
+
+@media (max-width:420px){
+    
+    .portfolio-image img:first-child{
+        grid-row: span 0;
+    }
+    .portfolio-image{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+    .portfolio-image img:hover,
+    .portfolio-image img:focus{
+    transform: scale(1);
+}
 }
