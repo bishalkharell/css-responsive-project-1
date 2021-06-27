@@ -172,6 +172,8 @@ li:not(:last-child) a:hover{
     overflow-x: hidden;
     overflow-y: hidden;
     text-align:center;
+    width:300px;
+    height:300px;
 }
 
 .header-image img{
