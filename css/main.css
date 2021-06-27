@@ -171,15 +171,14 @@ li:not(:last-child) a:hover{
     display: block;
     overflow-x: hidden;
     overflow-y: hidden;
-}
-.header-image{
-    text-align: center;
+    text-align:center;
 }
 
 .header-image img{
     margin: auto;
-    border-radius: 60%;
-    max-width: 100%;
+    border-radius: 50%;
+    width:300px;
+    height:300px;
 }
 
 
