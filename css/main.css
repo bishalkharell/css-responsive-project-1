@@ -168,19 +168,15 @@ li:not(:last-child) a:hover{
 }
 
 .header-image{
-    display: block;
     overflow-x: hidden;
     overflow-y: hidden;
     text-align:center;
-    width:300px;
-    height:300px;
 }
 
 .header-image img{
     margin: auto;
     border-radius: 50%;
-    width:300px;
-    height:300px;
+    max-width: 100%;
 }
 
 
